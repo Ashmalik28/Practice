@@ -6,7 +6,7 @@ const JWT_SECRET = "adkjnxadncjdanadc";
 const mongoose = require('mongoose');
 const { z } = require("zod");
 
-mongoose.connect("mongodb+srv://ashyammalik052:fRQiTE1ipiJMVWDB@cluster0.nhajw9z.mongodb.net/todo-app-2")
+mongoose.connect("")
 
 
 const app = express();
@@ -24,7 +24,8 @@ app.post("/signup" , async function(req , res) {
 
     if(!parsedDataWithSuccess.success){
         res.json({
-            message : "Incorrect Format"
+            message : "Incorrect Format" ,
+            error : parsedDataWithSuccess.error 
         })
         return
     }
