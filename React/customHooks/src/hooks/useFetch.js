@@ -18,7 +18,6 @@ export function useFetch(url , retryTime ){
 
     useEffect(() => {
         setInterval(getDetails , retryTime * 1000);
-
     }, [])
  
 
